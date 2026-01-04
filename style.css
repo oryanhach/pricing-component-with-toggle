@@ -244,6 +244,13 @@ header {
 	color: var(--clr-gray-700);
 }
 
+.plan__price span {
+	font-size: var(--fs-2);
+	position: relative;
+	top: -8px;
+	left: -4px;
+}
+
 .plan > :not(.plan__name) {
 	margin-bottom: 1rem;
 }
@@ -257,6 +264,7 @@ header {
 .plan__cta {
 	display: block;
 	text-decoration: none;
+	text-transform: uppercase;
 	width: 100%;
 	padding: 0.7rem 1rem;
 	border-radius: 6px;
