@@ -115,17 +115,20 @@ h6 {
 
 /* general styling */
 
-.page {
+body {
+	min-height: 100vh;
 	background-color: var(--clr-blue-50);
+	background-image: url('./images/bg-top.svg');
+	background-repeat: no-repeat;
+	background-position: top -45px right -190px;
+}
+
+.page {
 	font-family: var(--ff-main);
 	color: var(--clr-gray-650);
 	font-weight: var(--fw-main);
 	text-align: center;
 	margin-bottom: 5rem;
-
-	background-image: url('./images/bg-top.svg');
-	background-repeat: no-repeat;
-	background-position: top -45px right -190px;
 }
 
 header {
@@ -192,7 +195,7 @@ header {
 
 /* Hover effect (optional) */
 .toggle:hover .toggle__track {
-	opacity: 0.85;
+	opacity: 0.65;
 }
 
 /* Keyboard focus */
@@ -266,6 +269,12 @@ header {
 	);
 }
 
+.plan__cta:hover {
+	background: var(--clr-white);
+	color: var(--clr-blue-500);
+	outline: 1px solid var(--clr-blue-500);
+}
+
 .plan:nth-of-type(2) {
 	background: linear-gradient(
 		to right,
@@ -282,4 +291,31 @@ header {
 .plan:nth-of-type(2) .plan__cta {
 	background: var(--clr-white);
 	color: var(--clr-blue-500);
+}
+
+.plan:nth-of-type(2) .plan__cta:hover {
+	background: transparent;
+	color: var(--clr-white);
+	outline: 1px solid var(--clr-white);
+}
+
+@media (min-width: 1440px) {
+	.pricing__plans {
+		flex-direction: row;
+		gap: 0;
+	}
+
+	.plan {
+		min-width: 26.5%;
+	}
+
+	.plan:nth-of-type(2) {
+		padding: 2.5rem 2rem;
+	}
+
+	body {
+		background-image: url('./images/bg-top.svg'), url(images/bg-bottom.svg);
+		background-repeat: no-repeat;
+		background-position: top -15px right -50px, bottom -40px left -50px;
+	}
 }
